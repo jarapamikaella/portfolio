@@ -20,7 +20,7 @@ const ttPoppins = localFont({
       style: 'medium',
     },
     {
-      path: './fonts/Poppins-Semibold.ttf',
+      path: './fonts/Poppins-SemiBold.ttf',
       weight: '600',
       style: 'semibold',
     },
