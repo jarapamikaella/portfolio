@@ -2,12 +2,13 @@ import React from 'react'
 
 interface ButtonProps {
   label: string
+  onPress?: () => void;
 }
 
-export const Button = ({ label }: ButtonProps) => {
+export const Button = ({ label, onPress }: ButtonProps) => {
   return (
     <div className='bg-gradient-to-r from-violet-500 via-purple-400 to-blue-500 rounded-md p-[1px]'>
-      <button className='bg-black py-2 px-8 rounded-md'>
+      <button className='bg-white py-2 px-8 rounded-md' onClick={onPress}>
         {label}
       </button>
     </div>
