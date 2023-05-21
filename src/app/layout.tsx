@@ -38,7 +38,7 @@ const ttPoppins = localFont({
 });
 
 export const metadata = {
-  title: 'Mika Jarapa',
+  title: 'Mika-Ella Jarapa',
   description: 'Portfolio Website',
 }
 
