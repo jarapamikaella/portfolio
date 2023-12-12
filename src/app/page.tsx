@@ -4,7 +4,6 @@ import Projects from './projects/page';
 import Blogs from './blogs/page';
 import Contact from './contact/page';
 import Footer from '@/components/Footer';
-import { ThemeProvider } from "next-themes"
 
 export default function Home() {
   return (
