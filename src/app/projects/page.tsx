@@ -5,7 +5,7 @@ import React from 'react'
 const Projects = () => {
   return (
     <section id='projects' className='container mx-auto scroll-mt-32 pt-5 sm:pt-20'>
-      <p className='text-3xl sm:text-4xl capitalize text-customGray font-bold'>PROJECTS</p>
+      <p className='text-3xl sm:text-4xl capitalize text-customGray dark:text-gray-50 font-bold'>PROJECTS</p>
       <div className='flex flex-col sm:grid sm:grid-cols-4 w-full gap-5 py-10'>
         <PhotoCard
           image="/images/background.jpeg"

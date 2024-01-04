@@ -1,9 +1,13 @@
+"use client";
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTheme } from "next-themes";
 
 export const Header = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <section>
       <div className='pt-28 pb-20 sm:h-[calc(100vh-180px)] sm:pt-0 sm:pb-0 sm:container sm:mx-auto flex flex-col sm:items-center justify-center'>
@@ -21,28 +25,6 @@ export const Header = () => {
               <Button label='Get in Touch' />
             </Link>
           </div>
-          <div className='flex flex-col md:hidden container mx-auto gap-10'>
-            <div className='flex gap-4'>
-              <Image
-                src={"/icons/github.svg"}
-                alt="GithubLogo"
-                width={32}
-                height={32}
-              />
-              <Image
-                src={"/icons/linkedIn.svg"}
-                alt="GithubLogo"
-                width={32}
-                height={32}
-              />
-              <Image
-                src={"/icons/instagram.svg"}
-                alt="GithubLogo"
-                width={32}
-                height={32}
-              />
-            </div>
-          </div>
         </div>
       </div>
       <div className='hidden sm:flex w-full container mx-auto items-center justify-between'>
@@ -57,21 +39,21 @@ export const Header = () => {
             />
           </div>
         </Link>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 align-middle items-center'>
           <Image
-            src={"/icons/github.svg"}
+            src={theme === 'light' ? "/icons/github.svg" : "/icons/github-white.svg"}
             alt="GithubLogo"
             width={32}
             height={32}
           />
           <Image
-            src={"/icons/linkedIn.svg"}
+            src={theme === 'light' ? "/icons/linkedIn.svg" : "/icons/linkedIn-white.svg"}
             alt="GithubLogo"
             width={32}
             height={32}
           />
           <Image
-            src={"/icons/instagram.svg"}
+            src={theme === 'light' ? "/icons/instagram.svg" : "/icons/instagram-white.svg"}
             alt="GithubLogo"
             width={32}
             height={32}

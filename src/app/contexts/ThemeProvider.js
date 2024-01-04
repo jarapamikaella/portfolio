@@ -1,22 +1,17 @@
-// ThemeProvider.js
-'use client'
-import React, { useState, createContext } from 'react';
+"use client";
+import { ThemeProvider } from "next-themes";
+import { useState, useEffect } from "react";
 
-export const ThemeContext = createContext();
+export default function Providers({ children }) {
+  const [mounted, setMounted] = useState(false);
 
-export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  if (!mounted) {
+    return <>{children}</>;
+  }
 
-  const theme = {
-    isDarkMode,
-    toggleTheme,
-  };
-
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
-};
-
-export default ThemeProvider;
+  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+}

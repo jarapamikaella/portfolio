@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section className='container mx-auto scroll-mt-40 sm:pt-20' id='about'>
       <div className='py-4'>
-        <p className='text-xl sm:text-4xl capitalize text-customGray font-bold'>ABOUT</p>
+        <p className='text-xl sm:text-4xl capitalize text-customGray dark:text-gray-50 font-bold'>ABOUT</p>
         <p className='py-6 text-md sm:text-lg'>
           Hi, I'm Mika-Ella Jarapa, a frontend developer with 2 years of experience in creating intuitive and engaging digital experiences.
           I specialize in HTML, CSS, JavaScript, and other web technologies, and always aim to put the user first when designing and coding.
@@ -15,7 +15,7 @@ const About = () => {
         </p>
       </div>
       <div className='py-8 flex flex-col gap-8'>
-        <p className='text-3xl sm:text-4xl capitalize text-customGray font-bold'>TECHNOLOGIES</p>
+        <p className='text-3xl sm:text-4xl capitalize text-customGray dark:text-gray-50 font-bold'>TECHNOLOGIES</p>
         <div className='flex flex-wrap gap-8'>
           <img
             src={"/icons/html5.svg"}

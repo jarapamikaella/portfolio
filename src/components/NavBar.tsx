@@ -2,14 +2,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useContext } from 'react'
-import { ThemeContext } from '../app/contexts/ThemeProvider';
+// import { ThemeContext } from '../app/contexts/ThemeProvider';
+import { useTheme } from "next-themes";
 
 export const NavBar = () => {
-  let { toggleTheme, isDarkMode } = useContext(ThemeContext);
+  // let { toggleTheme, isDarkMode } = useContext(ThemeContext);
+  const { theme, setTheme } = useTheme();
 
   return (
     <nav>
-      <div className='px-5 sm:container sm:mx-auto py-4 flex items-center justify-between dark:text-red-900'>
+      <div className='px-5 sm:container sm:mx-auto py-4 flex items-center justify-between dark:text-white'>
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -30,13 +32,16 @@ export const NavBar = () => {
             <li className='inline-block cursor-pointer'>Blog</li>
           </Link>
           <Image
-            src={"/icons/dark.svg"}
+            src={theme === 'light' ? "/icons/dark.svg" : "/icons/light.svg"}
             alt="LightModeIcon"
             width={20}
             height={20}
             onClick={() => {
-              toggleTheme(!isDarkMode);
-              console.log('nope')
+              if(theme === 'light') {
+                setTheme("dark")
+                return;
+              }
+              setTheme("light");
             }}
             className='cursor-pointer'
           />
