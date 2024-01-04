@@ -1,7 +1,7 @@
 import NavBar from '@/components/NavBar';
 import './globals.css'
 import localFont from 'next/font/local';
-import { ThemeProvider } from '../app/contexts/ThemeProvider';
+import Providers from '../app/contexts/ThemeProvider';
 
 const ttPoppins = localFont({
   src: [
@@ -52,12 +52,12 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className={ttPoppins.className} >
-        <ThemeProvider>
+        <Providers>
           <NavBar />
           <div className='container mx-auto dark:bg-gray-800'>
             {children}
           </div>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )
