@@ -10,7 +10,7 @@ export default function Home() {
     <div className='pb-10 sm:pb-26 px-5'>
       <Header />
       <About />
-      <Blogs/>
+      {/* <Blogs/> */}
       <Projects/>
       <Contact/>
       <Footer/>
