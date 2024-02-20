@@ -20,7 +20,7 @@ const Projects = () => {
           title='BUCEILS HS Online Voting System'
           desciption='BUCEILS HS Online Voting System for Student Election, '
           subdesription='Tech stack : HTML , JavaScript, CSS, PHP'
-          withCodeLink={false}
+          codeLink='https://github.com/BSCS-3A/Monitoring'
           withLivePreview={false}
         />
         <PhotoCard

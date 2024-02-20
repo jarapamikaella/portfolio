@@ -55,7 +55,8 @@ export const Footer = () => {
               <li className='inline-block'>Blog</li>
             </Link>
           </div>
-          <p className='text-center text-sm'>© 2023  Mika-Ella Jarapa. All rights reserved </p>
+          <p>Built with <span className="font-semibold text-blue-600 dark:text-blue-400">Next.js</span> and <span className="font-semibold text-blue-600 dark:text-blue-400">TailwindCSS</span>, deployed with <span className="font-semibold text-blue-600 dark:text-blue-400">Vercel</span>.</p>
+          <p className='text-center'>© 2023  <a className="text-blue-600 dark:text-blue-400 font-semibold" href="https://github.com/jarapamikaella" target="_blank" rel="noreferrer noopener">Mika-Ella Jarapa. </a>All rights reserved </p>
         </div>
       </div>
     </footer>
